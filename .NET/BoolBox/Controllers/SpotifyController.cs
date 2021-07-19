@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BoolBox.Controllers
 {
-    public class GamerController : Controller
+    public class SpotifyController : Controller
     {
         public IActionResult Index()
         {
