@@ -8,6 +8,8 @@ using Microsoft.EntityFrameworkCore;
 using BoolBox.Data;
 using BoolBox.Models;
 
+using IronPython.Hosting;
+
 namespace BoolBox.Controllers
 {
     public class BoolsController : Controller
@@ -45,6 +47,8 @@ namespace BoolBox.Controllers
                 Types = new SelectList(await genreQuery.Distinct().ToListAsync()),
                 Bools = await bools.ToListAsync()
             };
+
+            Console.WriteLine("GOT BOOLS !!!!!!!!!!!!!!!!!!!!!");
 
             return View(boolTypeVM);
         }
@@ -90,6 +94,26 @@ namespace BoolBox.Controllers
             {
                 _context.Add(@bool);
                 await _context.SaveChangesAsync();
+
+                //!!!!!!!
+                Console.WriteLine("CREATED BOOL !!!!!!!!!!!!!!!!!!!!!");
+                Console.WriteLine("Enter a string to print from Python");
+                //var input = Console.ReadLine();
+                var py = Python.CreateEngine();
+                try
+                {
+                    py.ExecuteFile("C:\\Users\\Jonald\\Documents\\bool-box\\Python\\main.py "+@bool.SpotifyID);
+                   
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message.ToString());
+                }
+                //Console.WriteLine("Press Enter to Exit");
+                //Console.ReadLine();
+                //!!!!!!!
+
+
                 return RedirectToAction(nameof(Index));
             }
             return View(@bool);

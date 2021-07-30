@@ -13,12 +13,29 @@ using Microsoft.Extensions.Logging;
 using BoolBox.Data;
 using BoolBox.Models;
 
+using IronPython.Hosting;
+
 namespace BoolBox
 {
     public class Program
     {
         public static void Main(string[] args)
         {
+            Console.WriteLine("Enter a string to print from Python");
+            //var input = Console.ReadLine();
+            var py = Python.CreateEngine();
+            try
+            {
+                py.ExecuteFile("C:\\Users\\Jonald\\Documents\\bool-box\\Python\\main.py");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message.ToString());
+            }
+            //Console.WriteLine("Press Enter to Exit");
+            //Console.ReadLine();
+
+
             var host = CreateHostBuilder(args).Build();
 
             using (var scope = host.Services.CreateScope())
@@ -37,7 +54,6 @@ namespace BoolBox
             }
 
             host.Run();
-
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>

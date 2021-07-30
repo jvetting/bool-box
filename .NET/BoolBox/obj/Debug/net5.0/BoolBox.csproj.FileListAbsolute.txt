@@ -172,3 +172,11 @@ C:\Users\Jonald\Documents\bool-box\.NET\BoolBox\obj\Debug\net5.0\Razor\Views\Boo
 C:\Users\Jonald\Documents\bool-box\.NET\BoolBox\obj\Debug\net5.0\Razor\Views\Bools\Details.cshtml.g.cs
 C:\Users\Jonald\Documents\bool-box\.NET\BoolBox\obj\Debug\net5.0\Razor\Views\Bools\Edit.cshtml.g.cs
 C:\Users\Jonald\Documents\bool-box\.NET\BoolBox\obj\Debug\net5.0\Razor\Views\Bools\Index.cshtml.g.cs
+C:\Users\Jonald\Documents\bool-box\.NET\BoolBox\bin\Debug\net5.0\Microsoft.Dynamic.dll
+C:\Users\Jonald\Documents\bool-box\.NET\BoolBox\bin\Debug\net5.0\Microsoft.Scripting.Metadata.dll
+C:\Users\Jonald\Documents\bool-box\.NET\BoolBox\bin\Debug\net5.0\Microsoft.Scripting.dll
+C:\Users\Jonald\Documents\bool-box\.NET\BoolBox\bin\Debug\net5.0\IronPython.Modules.dll
+C:\Users\Jonald\Documents\bool-box\.NET\BoolBox\bin\Debug\net5.0\IronPython.SQLite.dll
+C:\Users\Jonald\Documents\bool-box\.NET\BoolBox\bin\Debug\net5.0\IronPython.Wpf.dll
+C:\Users\Jonald\Documents\bool-box\.NET\BoolBox\bin\Debug\net5.0\IronPython.dll
+C:\Users\Jonald\Documents\bool-box\.NET\BoolBox\bin\Debug\net5.0\System.CodeDom.dll
